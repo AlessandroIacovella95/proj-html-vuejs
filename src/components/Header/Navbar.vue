@@ -68,6 +68,7 @@ export default {
         </li>
       </ul>
       <div class="icons">
+        <span> 0 </span>
         <font-awesome-icon class="me-4" icon="fa-solid fa-magnifying-glass" />
         <font-awesome-icon class="me-4" icon="fa-solid fa-bag-shopping" />
         <font-awesome-icon class="me-4" icon="fa-solid fa-bars" />
@@ -80,6 +81,11 @@ export default {
         suscipit. Velit dolores veritatis similique.
       </p>
       <ButtonApp />
+    </div>
+    <div class="d-flex justify-content-center align-items-center text-light">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"><div class="slide_point"></div></div>
     </div>
   </div>
 </template>
@@ -121,9 +127,23 @@ export default {
   }
 
   .icons {
+    position: relative;
     color: white;
     font-size: 1.2rem;
     margin-top: 27px;
+    span {
+      position: absolute;
+      top: 2px;
+      left: 55px;
+      font-size: 0.8rem;
+      width: 15px;
+      background-color: #40c4ff;
+      line-height: 15px;
+      padding-left: 4px;
+
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
 
     .fa-magnifying-glass,
     .fa-bag-shopping,
@@ -146,6 +166,28 @@ export default {
   }
   p {
     font-size: 1.5rem;
+  }
+}
+.circle {
+  margin-right: 10px;
+  width: 25px;
+  aspect-ratio: 1;
+  background-color: #00000066;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle:last-child {
+  border: 2px solid white;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .slide_point {
+    width: 6px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
   }
 }
 
