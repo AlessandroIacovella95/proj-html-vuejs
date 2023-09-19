@@ -25,6 +25,8 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: #f2f8fc;
+  border: 0;
+  border-radius: 0;
   img {
     width: 80px;
     max-width: 100%;
