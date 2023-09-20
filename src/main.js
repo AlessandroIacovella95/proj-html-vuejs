@@ -7,9 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faMagnifyingGlass, faBagShopping, faBars, faCheck);
+library.add(faMagnifyingGlass, faBagShopping, faBars, faUser, faTag);
 
 const app = createApp(App);
 app.component("font-awesome-icon", FontAwesomeIcon);

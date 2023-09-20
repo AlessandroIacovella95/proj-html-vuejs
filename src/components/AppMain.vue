@@ -1,5 +1,6 @@
 <script>
 import AppMiniCards from "./Main/AppMiniCards.vue";
+import AppCards from "./Main/AppCards.vue";
 import List from "./Main/List.vue";
 export default {
   data() {
@@ -58,7 +59,7 @@ export default {
     },
   },
 
-  components: { AppMiniCards, List },
+  components: { AppMiniCards, List, AppCards },
 };
 </script>
 
@@ -168,6 +169,23 @@ export default {
           <List v-for="object in list_objects" :text="object.text" />
         </ul>
       </div>
+    </div>
+  </section>
+  <section class="bg_section container text-center">
+    <div class="text_content">
+      <h2>Popular Online Courses</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem ab
+        eligendi delectus voluptatibus, dignissimos officia pariatur dolore
+        adipisci labore obcaecati quidem veniam maiores iure itaque perspiciatis
+        consectetur omnis reiciendis tenetur?
+      </p>
+    </div>
+    <AppCards />
+    <div class="d-flex justify-content-center">
+      <div class="circle"></div>
+      <div class="circle slide_active"></div>
+      <div class="circle"></div>
     </div>
   </section>
 </template>
@@ -287,6 +305,31 @@ section {
     content: "✓";
     color: #40c4ff;
     margin-right: 10px;
+  }
+}
+.bg_section {
+  background-image: url("/img/page-background-img.png");
+  .text_content {
+    p {
+      padding: 0 100px;
+      color: #959595;
+      font-size: 1.1rem;
+      margin-top: 25px;
+    }
+  }
+  .circle {
+    margin-top: 100px;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 14px;
+    aspect-ratio: 1;
+    background-color: #9ce0ff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slide_active {
+    background-color: #40c4ff;
   }
 }
 </style>
