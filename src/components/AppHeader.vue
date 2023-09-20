@@ -2,9 +2,7 @@
 import Navbar from "./Header/Navbar.vue";
 export default {
   data() {
-    return {
-      components: { Navbar },
-    };
+    return {};
   },
   components: { Navbar },
 };

@@ -52,6 +52,22 @@ export default {
       </div>
     </div>
   </section>
+  <section class="bg_img d-flex justify-content-center align-items-center">
+    <div class="text-center text-light">
+      <img
+        class="mb-3"
+        src="../../public/img/testimonials-standard-2.png"
+        alt="testimonials"
+      />
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam
+        ratione atque labore. Iusto sapiente ex magnam. Eos voluptatum labore
+        velit temporibus, doloribus facilis voluptas iure ut at maiores iusto?
+      </p>
+      <h6>Joan Collins</h6>
+      <span>Student</span>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -95,6 +111,24 @@ section {
   .text {
     font-weight: 700;
     margin-left: 5px;
+  }
+}
+
+.bg_img {
+  height: 710px;
+  background-image: url("/img/h5-parallax-img-1.png");
+  background-position: top;
+  div {
+    width: 700px;
+    p {
+      font-size: 1.2rem;
+    }
+    h6 {
+      font-size: x-large;
+    }
+    span {
+      font-weight: 700;
+    }
   }
 }
 </style>
