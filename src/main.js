@@ -9,8 +9,20 @@ import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faMagnifyingGlass, faBagShopping, faBars, faUser, faTag);
+library.add(
+  faMagnifyingGlass,
+  faBagShopping,
+  faBars,
+  faUser,
+  faTag,
+  faCheck,
+  faXmark,
+  faCartShopping
+);
 
 const app = createApp(App);
 app.component("font-awesome-icon", FontAwesomeIcon);

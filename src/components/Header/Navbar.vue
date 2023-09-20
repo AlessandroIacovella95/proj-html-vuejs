@@ -1,5 +1,5 @@
 <script>
-import ButtonApp from "../Button.vue";
+import ButtonApp from "../AppButton.vue";
 export default {
   data() {
     return {

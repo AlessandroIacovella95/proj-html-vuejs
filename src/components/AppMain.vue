@@ -2,6 +2,7 @@
 import AppMiniCards from "./Main/AppMiniCards.vue";
 import AppCards from "./Main/AppCards.vue";
 import List from "./Main/List.vue";
+import AppTable from "./Main/AppTable.vue";
 export default {
   data() {
     return {
@@ -59,7 +60,7 @@ export default {
     },
   },
 
-  components: { AppMiniCards, List, AppCards },
+  components: { AppMiniCards, List, AppCards, AppTable },
 };
 </script>
 
@@ -168,6 +169,7 @@ export default {
         <ul class="list_items">
           <List v-for="object in list_objects" :text="object.text" />
         </ul>
+        <img class="logo" src="/img/h12-tabs-icon-1.png" alt="" />
       </div>
     </div>
   </section>
@@ -186,6 +188,25 @@ export default {
       <div class="circle"></div>
       <div class="circle slide_active"></div>
       <div class="circle"></div>
+    </div>
+  </section>
+  <section class="bg_section text-center">
+    <div class="container">
+      <h2>Pricing Plans</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus atque
+        illum autem distinctio quos asperiores voluptatibus rerum tenetur minus.
+      </p>
+    </div>
+
+    <div class="container d-flex justify-content-center">
+      <div class="logo_table">
+        <img src="/img/logo-table.png" alt="logo_table" />
+      </div>
+      <div class="logo_cart d-flex justify-content-center align-items-center">
+        <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+      </div>
+      <AppTable />
     </div>
   </section>
 </template>
@@ -287,6 +308,16 @@ section {
 }
 
 .col-7 {
+  position: relative;
+  .logo {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    width: 110px;
+  }
+}
+
+.col-7 {
   h3 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -330,6 +361,30 @@ section {
 
   .slide_active {
     background-color: #40c4ff;
+  }
+  .container {
+    position: relative;
+    .logo_table {
+      border: 1px solid #959595;
+      border-left: 0;
+      position: absolute;
+      top: 30px;
+      right: 190px;
+      cursor: pointer;
+    }
+
+    .logo_cart {
+      color: #ee2852;
+      width: 56px;
+      aspect-ratio: 1;
+      font-size: 1.5rem;
+      border: 1px solid #959595;
+      border-left: 0;
+      position: absolute;
+      top: 100px;
+      right: 190px;
+      cursor: pointer;
+    }
   }
 }
 </style>
