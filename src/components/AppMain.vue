@@ -3,6 +3,7 @@ import AppMiniCards from "./Main/AppMiniCards.vue";
 import AppCards from "./Main/AppCards.vue";
 import List from "./Main/List.vue";
 import AppTable from "./Main/AppTable.vue";
+import Image from "./Main/Img.vue";
 export default {
   data() {
     return {
@@ -50,6 +51,24 @@ export default {
           current: false,
         },
       ],
+      imageSponsor: [
+        {
+          img: "/img/h5-client-1-h.png",
+          url: "#",
+        },
+        {
+          img: "/img/h5-client-2.png",
+          url: "#",
+        },
+        {
+          img: "/img/h5-client-4-h.png",
+          url: "#",
+        },
+        {
+          img: "/img/h5-client-5.png",
+          url: "#",
+        },
+      ],
     };
   },
   methods: {
@@ -60,7 +79,7 @@ export default {
     },
   },
 
-  components: { AppMiniCards, List, AppCards, AppTable },
+  components: { AppMiniCards, List, AppCards, AppTable, Image },
 };
 </script>
 
@@ -208,6 +227,9 @@ export default {
       </div>
       <AppTable />
     </div>
+  </section>
+  <section class="container custom_container d-flex justify-content-center">
+    <Image v-for="image in imageSponsor" :img="image.img" />
   </section>
 </template>
 
@@ -386,5 +408,9 @@ section {
       cursor: pointer;
     }
   }
+}
+
+.custom_container {
+  margin-top: 100px !important;
 }
 </style>
