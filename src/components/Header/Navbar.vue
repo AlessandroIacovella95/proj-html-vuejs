@@ -35,6 +35,8 @@ export default {
           current: false,
         },
       ],
+      buttonPrimary: "button_primary",
+      buttonText: "REGISTER NOW",
     };
   },
 
@@ -80,7 +82,7 @@ export default {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vitae
         suscipit. Velit dolores veritatis similique.
       </p>
-      <ButtonApp />
+      <ButtonApp :customButton="buttonPrimary" :text="buttonText" />
     </div>
     <div class="d-flex justify-content-center align-items-center text-light">
       <div class="circle"></div>
@@ -166,6 +168,17 @@ export default {
   }
   p {
     font-size: 1.5rem;
+  }
+  .button_primary {
+    width: 250px;
+    height: 70px;
+    border: #40c4ff;
+    margin: 20px auto;
+    border-radius: 0;
+    color: white;
+    background-color: #40c4ff;
+    font-weight: 700;
+    cursor: pointer;
   }
 }
 .circle {

@@ -3,21 +3,12 @@ export default {
   data() {
     return {};
   },
+  props: { customButton: String, text: String },
 };
 </script>
 
 <template>
-  <button type="button" class="custom btn btn-primary">REGISTER NOW</button>
+  <button type="button" :class="customButton">{{ text }}</button>
 </template>
 
-<style lang="scss" scoped>
-.custom {
-  background-color: #40c4ff;
-  width: 250px;
-  height: 70px;
-  border: #40c4ff;
-  margin: 20px auto;
-  cursor: pointer;
-  border-radius: 0;
-}
-</style>
+<style lang="scss" scoped></style>
