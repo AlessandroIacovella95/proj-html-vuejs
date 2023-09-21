@@ -7,6 +7,7 @@ import Image from "./Main/Img.vue";
 export default {
   data() {
     return {
+      title: "What we Do",
       list_items: [
         {
           text: "What We Do",
@@ -72,9 +73,10 @@ export default {
     };
   },
   methods: {
-    toggleCurrent(index) {
+    toggleCurrent(index, newText) {
       this.list_items.forEach((item, i) => {
         item.current = i == index;
+        this.title = newText;
       });
     },
   },
@@ -171,12 +173,12 @@ export default {
             v-for="(item, index) in list_items"
             :text="item.text"
             :class="{ items: item, active_border: item.current }"
-            @click="toggleCurrent(index)"
+            @click="toggleCurrent(index, item.text)"
           />
         </ul>
       </div>
       <div class="col-7">
-        <h3>Learning Possibilities</h3>
+        <h3>{{ title }}</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil minima
           laudantium quis laboriosam repellat quod iure quas voluptatem ratione
