@@ -52,7 +52,7 @@ export default {
 </script>
 
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid" id="start">
     <div class="navbar">
       <img class="logo mt-4 ms-4" src="/img/logo-light.png" alt="logo" />
       <ul>
