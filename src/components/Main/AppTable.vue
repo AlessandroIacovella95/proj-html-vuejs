@@ -125,6 +125,7 @@ table {
   .table_bg {
     background-color: #f7fdff;
   }
+
   .button_primary {
     width: 160px;
     height: 50px;
