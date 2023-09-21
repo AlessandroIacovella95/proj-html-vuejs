@@ -412,5 +412,9 @@ section {
 
 .custom_container {
   margin-top: 100px !important;
+  img {
+    cursor: pointer;
+    margin-right: 20px;
+  }
 }
 </style>
