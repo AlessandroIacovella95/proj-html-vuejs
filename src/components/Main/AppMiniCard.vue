@@ -27,6 +27,7 @@ export default {
   background-color: #f2f8fc;
   border: 0;
   border-radius: 0;
+  cursor: pointer;
   img {
     width: 80px;
     max-width: 100%;
