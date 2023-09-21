@@ -3,6 +3,11 @@ import ButtonApp from "../AppButton.vue";
 export default {
   data() {
     return {
+      backgroundImages: [
+        "h3-slide-1-background.jpg",
+        "h3-slide-2-background.jpg",
+        "h5-slide-3-background.jpg",
+      ],
       links: [
         {
           text: "HOME",
@@ -35,6 +40,8 @@ export default {
           current: false,
         },
       ],
+      currentBackgroundIndex: 0,
+      selectedCircleIndex: 0,
       buttonPrimary: "button_primary",
       buttonText: "REGISTER NOW",
     };
@@ -47,12 +54,22 @@ export default {
         link.current = i == index;
       });
     },
+    changeBackground(index) {
+      this.currentBackgroundIndex = index;
+      this.selectedCircleIndex = index;
+    },
   },
 };
 </script>
 
 <template>
-  <div class="container-fluid" id="start">
+  <div
+    class="container-fluid"
+    :style="{
+      backgroundImage: `url('/img/${backgroundImages[currentBackgroundIndex]}')`,
+    }"
+    id="start"
+  >
     <div class="navbar">
       <img class="logo mt-4 ms-4" src="/img/logo-light.png" alt="logo" />
       <ul>
@@ -85,9 +102,21 @@ export default {
       <ButtonApp :customButton="buttonPrimary" :text="buttonText" />
     </div>
     <div class="d-flex justify-content-center align-items-center text-light">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"><div class="slide_point"></div></div>
+      <div
+        class="circle"
+        @click="changeBackground(0)"
+        :class="{ slide_point: selectedCircleIndex === 0 }"
+      ></div>
+      <div
+        class="circle"
+        @click="changeBackground(1)"
+        :class="{ slide_point: selectedCircleIndex === 1 }"
+      ></div>
+      <div
+        class="circle"
+        @click="changeBackground(2)"
+        :class="{ slide_point: selectedCircleIndex === 2 }"
+      ></div>
     </div>
   </div>
 </template>
@@ -191,17 +220,16 @@ export default {
 }
 
 .circle:last-child {
-  border: 2px solid white;
-  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  .slide_point {
-    width: 6px;
-    aspect-ratio: 1;
-    background-color: white;
-    border-radius: 50%;
-  }
+}
+.slide_point {
+  border: 2px solid white;
+  width: 25px;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .active_border {

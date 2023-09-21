@@ -16,9 +16,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-header {
-  background-image: url("/img/h5-slide-3-background.jpg");
-}
+// header {
+//   background-image: url("/img/h5-slide-3-background.jpg");
+// }
 .button_custom {
   display: flex;
   justify-content: center;
