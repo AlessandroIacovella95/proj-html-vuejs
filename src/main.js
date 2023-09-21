@@ -12,6 +12,11 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faMagnifyingGlass,
@@ -21,7 +26,12 @@ library.add(
   faTag,
   faCheck,
   faXmark,
-  faCartShopping
+  faCartShopping,
+  faPhone,
+  faClock,
+  faTwitter,
+  faSquareInstagram,
+  faFacebook
 );
 
 const app = createApp(App);

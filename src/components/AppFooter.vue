@@ -93,6 +93,12 @@ export default {
           @click="toggleActive(element, index, list_Academy)"
         />
       </ul>
+      <p class="text-light mt-5">
+        <font-awesome-icon icon="fa-solid fa-phone" /> 1-677-124-44227
+      </p>
+      <p class="text-light">
+        <font-awesome-icon icon="fa-regular fa-clock" /> Mon - Sat 8.00 - 18.00
+      </p>
     </div>
     <div class="container_list">
       <h3 class="text-light">Popular Courses</h3>
@@ -122,6 +128,26 @@ export default {
       <img class="world_img" src="/img/footer-img-1.png" alt="img_world" />
     </div>
   </div>
+  <section>
+    <div class="container d-flex">
+      <div class="container footer_bottom">
+        <p class="mt-5">Copyrights 2017 Mikado Themes</p>
+      </div>
+      <div class="d-flex info">
+        <p class="mt-5">CALL +44 300 303 0266</p>
+        <p class="mt-5">FOLLOW US</p>
+        <span class="mt-5"
+          ><font-awesome-icon icon="fa-brands fa-twitter"
+        /></span>
+        <span class="mt-5"
+          ><font-awesome-icon icon="fa-brands fa-square-instagram"
+        /></span>
+        <span class="mt-5"
+          ><font-awesome-icon icon="fa-brands fa-facebook"
+        /></span>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -169,6 +195,34 @@ export default {
   }
   .world_img {
     width: 250px;
+  }
+}
+
+section {
+  .container {
+    border-top: 1px solid #898989;
+    padding-top: 0;
+    .footer_bottom {
+      margin: 0 auto;
+    }
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      color: #898989;
+    }
+  }
+  .info {
+    color: #898989;
+    margin-bottom: 30px;
+    p {
+      white-space: nowrap;
+      font-size: 0.9rem;
+      margin-right: 15px;
+    }
+
+    span {
+      margin-right: 15px;
+    }
   }
 }
 </style>
