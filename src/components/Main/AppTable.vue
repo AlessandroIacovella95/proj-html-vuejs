@@ -94,7 +94,7 @@ export default {
           <ButtonApp :customButton="buttonSecondary" :text="buttonText" />
         </td>
         <td class="table_bg">
-          <ButtonApp :customButton="buttonPrimary" :text="buttonText" />
+          <ButtonApp :customButton="buttonSecondary" :text="buttonText" />
         </td>
         <td class="table_bg">
           <ButtonApp :customButton="buttonSecondary" :text="buttonText" />
@@ -126,7 +126,7 @@ table {
     background-color: #f7fdff;
   }
 
-  .button_primary {
+  button:hover {
     width: 160px;
     height: 50px;
     border: #40c4ff;
