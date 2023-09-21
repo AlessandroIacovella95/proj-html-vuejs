@@ -7,6 +7,7 @@ import Image from "./Main/Img.vue";
 export default {
   data() {
     return {
+      currentProfileIndex: 0,
       title: "What we Do",
       list_items: [
         {
@@ -70,6 +71,23 @@ export default {
           url: "#",
         },
       ],
+      profiles: [
+        {
+          image: "/img/testimonials-standard-2.png",
+          text: "Joan Collins",
+          profession: "Student",
+        },
+        {
+          image: "/img/testimonials-standard-1.png",
+          text: "Rosa Park",
+          profession: "Web Designer",
+        },
+        {
+          image: "/img/testimonials-standard-3.png",
+          text: "Alex Blair",
+          profession: "Developer",
+        },
+      ],
     };
   },
   methods: {
@@ -78,6 +96,10 @@ export default {
         item.current = i == index;
         this.title = newText;
       });
+    },
+
+    changeProfile(index) {
+      this.currentProfileIndex = index;
     },
   },
 
@@ -141,25 +163,42 @@ export default {
     <div class="container text-center">
       <div class="row">
         <div class="col text-light">
-          <img
-            class="mb-3"
-            src="/img/testimonials-standard-2.png"
-            alt="testimonials"
-          />
-          <p class="mb-4 text-light">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam
-            ratione atque labore. Iusto sapiente ex magnam. Eos voluptatum
-            labore velit temporibus, doloribus facilis voluptas iure ut at
-            maiores iusto?
-          </p>
-          <h6>Joan Collins</h6>
-          <span>Student</span>
+          <div v-for="(profile, index) in profiles" :key="index">
+            <img
+              class="mb-3"
+              :src="profile.image"
+              alt="testimonials"
+              v-show="index === currentProfileIndex"
+            />
+            <p v-show="index === currentProfileIndex" class="mb-4 text-light">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+              veniam ratione atque labore. Iusto sapiente ex magnam. Eos
+              voluptatum labore velit temporibus, doloribus facilis voluptas
+              iure ut at maiores iusto?
+            </p>
+            <h6 v-show="index === currentProfileIndex">{{ profile.text }}</h6>
+            <span v-show="index === currentProfileIndex">{{
+              profile.profession
+            }}</span>
+          </div>
           <div
             class="d-flex justify-content-center align-items-center text-light"
           >
-            <div class="circle"></div>
-            <div class="circle slide_active"></div>
-            <div class="circle"></div>
+            <div
+              :class="{ slide_active: currentProfileIndex === 0 }"
+              class="circle"
+              @click="changeProfile(0)"
+            ></div>
+            <div
+              :class="{ slide_active: currentProfileIndex === 1 }"
+              class="circle"
+              @click="changeProfile(1)"
+            ></div>
+            <div
+              :class="{ slide_active: currentProfileIndex === 2 }"
+              class="circle"
+              @click="changeProfile(2)"
+            ></div>
           </div>
         </div>
       </div>
@@ -305,7 +344,6 @@ section {
     border-radius: 50%;
     cursor: pointer;
   }
-
   .slide_active {
     background-color: white;
   }
